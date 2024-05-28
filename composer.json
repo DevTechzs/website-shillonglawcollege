@@ -1,0 +1,21 @@
+{
+    "name": "monoj/prayag-edu",
+    "authors": [
+        {
+            "name": "Monoj Das",
+            "email": "manoj@techz.in"
+        }
+    ],
+    "require": {
+      "ext-curl": "*",
+      "ext-json": "*",
+      "ext-fileinfo": "*",
+      "ext-gd": "*",
+      "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\":"./app"
+        }
+    }
+}
