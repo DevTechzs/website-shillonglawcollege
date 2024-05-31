@@ -303,7 +303,7 @@
                                             <div class="dropdown-divider"></div>
                                             <li><a class="dropdown-item" href="alumini-committee"> Alumini Committee </a></li>
                                             <div class="dropdown-divider"></div>
-                                            <li><a class="dropdown-item"  href="anti-ragging-cell"> Anti-Raging Cell </a></li>
+                                            <li><a class="dropdown-item"  href="anti-ragging-cell"> Anti-Raging Cell</a></li>
                                             <div class="dropdown-divider"></div>
                                             <li><a class="dropdown-item" href="cultural-committee"> Cultural Committee </a></li>
                                             <div class="dropdown-divider"></div>

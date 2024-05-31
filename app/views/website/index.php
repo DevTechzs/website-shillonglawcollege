@@ -89,6 +89,12 @@ include_once('inc/header.php');
                 <a class="nav-link" href="alumni-advisory"> <img src="assets/images/Alumni.png" alt="" /> Alumini </a>
               </li>
 
+              <li class="nav-item">
+                <a class="nav-link" href="gallery-gallery"> <img src="assets/images/Alumni.png" alt="" /> Gallery </a>
+              </li>
+
+              
+
               <li class="nav-item has-submenu" style="display:none;">
                 <a class="nav-link" href="#"> <i class="fa fa-picture-o" aria-hidden="true"></i> Gallery <i class="fa fa-angle-down"></i> </a>
                 <ul class="submenu collapse">

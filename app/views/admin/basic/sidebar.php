@@ -16,8 +16,8 @@
 			   with font-awesome or any other icon font library -->
 
 
-               
-               <!-- <li class="nav-item has-treeview">
+
+                <!-- <li class="nav-item has-treeview">
                     <a href="cc_program_add" class="nav-link">
                         <i class="nav-icon fad fa-scroll"></i>
                         <p>
@@ -41,7 +41,7 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-               <!-- <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="admin-url_category" class="nav-link">
                         <i class="nav-icon fas fa-list"></i>
                         <p>URL Category</p>
@@ -53,16 +53,23 @@
                         <p>All Document(s)</p>
                     </a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="admin-news" class="nav-link">
                         <i class="nav-icon fas fa-bullhorn"></i>
                         <p>News</p>
                     </a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a href="admin-gallery" class="nav-link">
                         <i class="nav-icon fas fa-image"></i>
                         <p>Gallery</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="changepassword" class="nav-link">
+                        <i class="nav-icon fas fa-key"></i>
+                        <p>Change Password</p>
                     </a>
                 </li>
                 <li class="nav-item">

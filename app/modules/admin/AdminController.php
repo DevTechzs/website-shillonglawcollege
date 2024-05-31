@@ -1,17 +1,18 @@
 <?php
+
 namespace app\modules\admin;
+
 use app\core\Controller;
 use \app\database\DBController;
 use app\modules\admin\classes\Admin;
 
 
-class AdminController implements Controller 
+class AdminController implements Controller
 {
-    function Route($data) 
+    function Route($data)
     {
         $jsondata = $data["JSON"];
-        switch ($data["Page_key"]) 
-        {
+        switch ($data["Page_key"]) {
             case 'getURLLinkData':
                 $result = (new Admin())->getURLLinkData($jsondata);
                 break;
@@ -37,7 +38,7 @@ class AdminController implements Controller
                 $result = (new Admin())->getAllNews($jsondata);
                 break;
             case 'getImages':
-                $result = (new Admin())->getImages($jsondata);
+                $result = (new Admin())->getImages();
                 break;
             case 'addURLCategory':
                 $result = (new Admin())->addURLCategory($jsondata);
@@ -53,6 +54,13 @@ class AdminController implements Controller
                 break;
             case 'addImages':
                 $result = (new Admin())->addImages($jsondata);
+                break;
+            case 'getGalleriesForWebsite':
+                $result = (new Admin())->getGalleriesForWebsite($jsondata);
+                break;
+
+            case 'deleteNews':
+                $result = (new Admin())->deleteNews($jsondata);
                 break;
             default:
                 $result = array("return_code" => false, "return_data" => array("Page Key not found"));
@@ -83,7 +91,7 @@ class AdminController implements Controller
             case 'gallery':
                 load($viewpath . "gallery.php");
                 break;
-      
+
             default:
                 // session_destroy();
                 include '404.php';
@@ -91,6 +99,5 @@ class AdminController implements Controller
                 header("Status: 401 ");
                 break;
         }
-
     }
 }

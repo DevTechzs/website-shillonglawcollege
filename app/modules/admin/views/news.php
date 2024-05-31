@@ -72,8 +72,8 @@
                                                     <div class="row" style="display:none">
                                                         <div class="col-sm-12 col-md-12 col-lg-12">
                                                             <div class="form-group">
-                                                            <label>Add File(s)</label>
-                                                            <input class="form-control bootstrapToggle" id="add_files" type="checkbox" data-on="Yes" data-off="No" data-onstyle="success" data-offstyle="light" />
+                                                                <label>Add File(s)</label>
+                                                                <input class="form-control bootstrapToggle" id="add_files" type="checkbox" data-on="Yes" data-off="No" data-onstyle="success" data-offstyle="light" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -88,18 +88,18 @@
                                                             <div class="row" style="height:auto; overflow:auto">
                                                                 <table id="tblFiles" class="table table-bordered table-hover" style="width:100%; text-align:left;">
                                                                     <thead>
-                                                                    <tr>
-                                                                        <th style="vertical-align:middle; width:10%; text-align:center;">Select</th>
-                                                                        <th style="vertical-align:middle; width:40%;">Title<b style="color:red;">*</b></th>
-                                                                        <th style="vertical-align:middle; width:50%;">File<b style="color:red;">*</b></th>
-                                                                    </tr>                                    
+                                                                        <tr>
+                                                                            <th style="vertical-align:middle; width:10%; text-align:center;">Select</th>
+                                                                            <th style="vertical-align:middle; width:40%;">Title<b style="color:red;">*</b></th>
+                                                                            <th style="vertical-align:middle; width:50%;">File<b style="color:red;">*</b></th>
+                                                                        </tr>
                                                                     </thead>
                                                                     <tbody>
-                                                                    <tr>
-                                                                        <td style="vertical-align:middle; width:10%; text-align:center;"><input type="checkbox"/></td>
-                                                                        <td style="vertical-align:middle; width:40%;"><input type="text" id="file_title1" class="form-control file_title" placeholder="Eg. ACADEMIC CALENDAR" maxlength="99" autocomplete="off"/></td>
-                                                                        <td style="vertical-align:middle; width:50%;"><input type="file" id="file1" accept="image/*,.pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx" class="dropify file" data-height="100"/></td>
-                                                                    </tr>
+                                                                        <tr>
+                                                                            <td style="vertical-align:middle; width:10%; text-align:center;"><input type="checkbox" /></td>
+                                                                            <td style="vertical-align:middle; width:40%;"><input type="text" id="file_title1" class="form-control file_title" placeholder="Eg. ACADEMIC CALENDAR" maxlength="99" autocomplete="off" /></td>
+                                                                            <td style="vertical-align:middle; width:50%;"><input type="file" id="file1" accept="image/*,.pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx" class="dropify file" data-height="100" /></td>
+                                                                        </tr>
                                                                     </tbody>
                                                                 </table>
                                                             </div>
@@ -109,8 +109,8 @@
                                                     <div class="row">
                                                         <div class="col-sm-12 col-md-12 col-lg-12">
                                                             <div class="form-group">
-                                                            <label>Add Link(s)</label>
-                                                            <input class="form-control bootstrapToggle" id="add_links" type="checkbox" data-on="Yes" data-off="No" data-onstyle="success" data-offstyle="light" />
+                                                                <label>Add Link(s)</label>
+                                                                <input class="form-control bootstrapToggle" id="add_links" type="checkbox" data-on="Yes" data-off="No" data-onstyle="success" data-offstyle="light" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -125,18 +125,18 @@
                                                             <div class="row" style="height:auto; overflow:auto">
                                                                 <table id="tblLinks" class="table table-bordered table-hover" style="width:100%; text-align:left;">
                                                                     <thead>
-                                                                    <tr>
-                                                                        <th style="vertical-align:middle; width:10%; text-align:center;">Select</th>
-                                                                        <th style="vertical-align:middle; width:40%;">Link Title<b style="color:red;">*</b></th>
-                                                                        <th style="vertical-align:middle; width:50%;">Link<b style="color:red;">*</b></th>
-                                                                    </tr>                                    
+                                                                        <tr>
+                                                                            <th style="vertical-align:middle; width:10%; text-align:center;">Select</th>
+                                                                            <th style="vertical-align:middle; width:40%;">Link Title<b style="color:red;">*</b></th>
+                                                                            <th style="vertical-align:middle; width:50%;">Link<b style="color:red;">*</b></th>
+                                                                        </tr>
                                                                     </thead>
                                                                     <tbody>
-                                                                    <tr>
-                                                                        <td style="vertical-align:middle; width:10%; text-align:center;"><input type="checkbox"/></td>
-                                                                        <td style="vertical-align:middle; width:40%;"><input type="text" id="link_title1" class="form-control link_title" placeholder="Eg. COLLEGE WEBSITE" maxlength="99" autocomplete="off"/></td>
-                                                                        <td style="vertical-align:middle; width:50%;"><input type="text" id="link1" class="form-control link" placeholder="Eg. http://shillonglawcollege.in/" maxlength="99" autocomplete="off"/></td>
-                                                                    </tr>
+                                                                        <tr>
+                                                                            <td style="vertical-align:middle; width:10%; text-align:center;"><input type="checkbox" /></td>
+                                                                            <td style="vertical-align:middle; width:40%;"><input type="text" id="link_title1" class="form-control link_title" placeholder="Eg. COLLEGE WEBSITE" maxlength="99" autocomplete="off" /></td>
+                                                                            <td style="vertical-align:middle; width:50%;"><input type="text" id="link1" class="form-control link" placeholder="Eg. http://shillonglawcollege.in/" maxlength="99" autocomplete="off" /></td>
+                                                                        </tr>
                                                                     </tbody>
                                                                 </table>
                                                             </div>
@@ -249,10 +249,15 @@
 <script>
     var news_id, title, sdate, edate, type;
 
-    var add_files=add_links=0;
+    var add_files = add_links = 0;
 
     // $("#datepicker").datepicker({ minDate: "-3M -15D", maxDate: "+3M +15D",changeMonth:true,changeYear:true });
-    $("#sdate, #sdate1, #edate, #edate1").datepicker({ minDate: "-0D", maxDate: "+1Y", changeMonth:true, changeYear:true });
+    $("#sdate, #sdate1, #edate, #edate1").datepicker({
+        minDate: "-0D",
+        maxDate: "+1Y",
+        changeMonth: true,
+        changeYear: true
+    });
     $('.dropify').dropify();
     $('.bootstrapToggle').bootstrapToggle();
 
@@ -261,62 +266,48 @@
         loadFormData();
     });
 
-    $("#sdate").on('change', function()
-    {
+    $("#sdate").on('change', function() {
         $('#edate').datepicker('option', 'minDate', new Date($("#sdate").val()));
     });
-    $("#sdate1").on('change', function()
-    {
+    $("#sdate1").on('change', function() {
         $('#edate1').datepicker('option', 'minDate', new Date($("#sdate1").val()));
     });
-    $('#add_files').on('change', function ()
-    {
-        if ($('#add_files').prop('checked'))
-        {
+    $('#add_files').on('change', function() {
+        if ($('#add_files').prop('checked')) {
             add_files = 1;
             $('.file_title').val('');
             $('.dropify-clear').click();
             $('#div_files').show();
-        }
-        else
-        {
+        } else {
             add_files = 0;
             $('#div_files').hide();
         }
     });
-    $('#add_links').on('change', function ()
-    {
-        if ($('#add_links').prop('checked'))
-        {
+    $('#add_links').on('change', function() {
+        if ($('#add_links').prop('checked')) {
             add_links = 1;
             $('.link_title').val('');
             $('.link').val('');
             $('#div_links').show();
-        }
-        else
-        {
+        } else {
             add_links = 0;
             $('#div_links').hide();
         }
     });
-    $('#frmAdd').submit(function()
-    {
+    $('#frmAdd').submit(function() {
         saveAddFormData();
         return false;
     });
-    $('#frmEdit').submit(function()
-    {
+    $('#frmEdit').submit(function() {
         saveEditFormData();
         return false;
     });
-    $('#mdlAdd, #mdlEdit').on('hidden.bs.modal', async function() 
-    {
+    $('#mdlAdd, #mdlEdit').on('hidden.bs.modal', async function() {
         $("input").val("");
         $('.select2').val(null).trigger('change');
         $('.dropify-clear').click();
     });
-    $('#tblData').on('click', 'tbody tr td button', function ()
-    {
+    $('#tblData').on('click', 'tbody tr td button', function() {
         news_id = $(this).attr('data-news_id');
         title = $(this).attr('data-title');
         sdate = $(this).attr('data-sdate');
@@ -341,43 +332,34 @@
         console.log(obj);
         TransportCall(obj);
 
-        $("#mdlView").modal("show");
+        // $("#mdlView").modal("show");
     });
 
-    function addRowFiles() 
-    {
-        if ($('#tblFiles tbody tr').length < 5)
-        {
-        $("#tblFiles").append($('#tblFiles tbody tr:last').clone());
-        $('#tblFiles tbody tr:last').each(function(row, tr)
-        {
-            $(tr).find('td').eq(1).prop('innerHTML', '');
-            $(tr).find('td').eq(1).append('<input type="text" id="file_title'+$('#tblFiles tbody tr').length+'" class="form-control file_title" placeholder="Example: ACADEMIC CALENDAR" maxlength="99" autocomplete="off"/>');
-            $(tr).find('td').eq(2).prop('innerHTML', '');
-            $(tr).find('td').eq(2).append('<input type="file" id="file'+$('#tblFiles tbody tr').length+'" accept="image/*,.pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx" class="dropify file" data-height="100"/>');
-            $('.dropify').dropify();
-        });
+    function addRowFiles() {
+        if ($('#tblFiles tbody tr').length < 5) {
+            $("#tblFiles").append($('#tblFiles tbody tr:last').clone());
+            $('#tblFiles tbody tr:last').each(function(row, tr) {
+                $(tr).find('td').eq(1).prop('innerHTML', '');
+                $(tr).find('td').eq(1).append('<input type="text" id="file_title' + $('#tblFiles tbody tr').length + '" class="form-control file_title" placeholder="Example: ACADEMIC CALENDAR" maxlength="99" autocomplete="off"/>');
+                $(tr).find('td').eq(2).prop('innerHTML', '');
+                $(tr).find('td').eq(2).append('<input type="file" id="file' + $('#tblFiles tbody tr').length + '" accept="image/*,.pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx" class="dropify file" data-height="100"/>');
+                $('.dropify').dropify();
+            });
+        } else {
+            toastr.info('Only 5 Files can be attached !!');
         }
-        else
-        {
-        toastr.info('Only 5 Files can be attached !!');
-            }
     }
-    function deleteRowFiles() 
-    {
-        try 
-        {
-            debugger;
+
+    function deleteRowFiles() {
+        try {
+
             var table = document.getElementById('tblFiles');
             var rowCount = table.rows.length;
-            for(var i=0; i<rowCount; i++) 
-            {
+            for (var i = 0; i < rowCount; i++) {
                 var row = table.rows[i];
                 var chkbox = row.cells[0].childNodes[0];
-                if(null != chkbox && true == chkbox.checked) 
-                {
-                    if(rowCount <= 2) 
-                    {					
+                if (null != chkbox && true == chkbox.checked) {
+                    if (rowCount <= 2) {
                         break;
                     }
                     table.deleteRow(i);
@@ -385,46 +367,36 @@
                     i--;
                 }
             }
-        }
-        catch(e) 
-        {
+        } catch (e) {
             alert(e);
         }
     }
-    function addRowLinks() 
-    {
-        if ($('#tblLinks tbody tr').length < 5)
-        {
-        $("#tblLinks").append($('#tblLinks tbody tr:last').clone());
-        $('#tblLinks tbody tr:last').each(function(row, tr)
-        {
-            $(tr).find('td').eq(1).prop('innerHTML', '');
-            $(tr).find('td').eq(1).append('<input type="text" id="link_title'+$('#tblLinks tbody tr').length+'" class="form-control link_title" placeholder="Eg. COLLEGE WEBSITE" maxlength="99" autocomplete="off"/>');
-            $(tr).find('td').eq(2).prop('innerHTML', '');
-            $(tr).find('td').eq(2).append('<input type="text" id="link'+$('#tblLinks tbody tr').length+'" class="form-control link" placeholder="Eg. http://shillonglawcollege.in/" maxlength="99" autocomplete="off"/>');
-            $('.dropify').dropify();
-        });
+
+    function addRowLinks() {
+        if ($('#tblLinks tbody tr').length < 5) {
+            $("#tblLinks").append($('#tblLinks tbody tr:last').clone());
+            $('#tblLinks tbody tr:last').each(function(row, tr) {
+                $(tr).find('td').eq(1).prop('innerHTML', '');
+                $(tr).find('td').eq(1).append('<input type="text" id="link_title' + $('#tblLinks tbody tr').length + '" class="form-control link_title" placeholder="Eg. COLLEGE WEBSITE" maxlength="99" autocomplete="off"/>');
+                $(tr).find('td').eq(2).prop('innerHTML', '');
+                $(tr).find('td').eq(2).append('<input type="text" id="link' + $('#tblLinks tbody tr').length + '" class="form-control link" placeholder="Eg. http://shillonglawcollege.in/" maxlength="99" autocomplete="off"/>');
+                $('.dropify').dropify();
+            });
+        } else {
+            toastr.info('Only 5 Links can be attached !!');
         }
-        else
-        {
-        toastr.info('Only 5 Links can be attached !!');
-            }
     }
-    function deleteRowLinks() 
-    {
-        try 
-        {
-            debugger;
+
+    function deleteRowLinks() {
+        try {
+
             var table = document.getElementById('tblLinks');
             var rowCount = table.rows.length;
-            for(var i=0; i<rowCount; i++) 
-            {
+            for (var i = 0; i < rowCount; i++) {
                 var row = table.rows[i];
                 var chkbox = row.cells[0].childNodes[0];
-                if(null != chkbox && true == chkbox.checked) 
-                {
-                    if(rowCount <= 2) 
-                    {					
+                if (null != chkbox && true == chkbox.checked) {
+                    if (rowCount <= 2) {
                         break;
                     }
                     table.deleteRow(i);
@@ -432,9 +404,7 @@
                     i--;
                 }
             }
-        }
-        catch(e) 
-        {
+        } catch (e) {
             alert(e);
         }
     }
@@ -446,6 +416,7 @@
         obj.JSON = {};
         TransportCall(obj);
     }
+
     function loadFormData() {
         let obj = {};
         obj.Module = "Admin";
@@ -460,38 +431,33 @@
 
         var fileData = {};
         var totalFileSize = 0;
-        for (var j = 1; j <= $('#tblFiles tbody tr').length; j++)
-        {
+        for (var j = 1; j <= $('#tblFiles tbody tr').length; j++) {
             var files = $('#file' + j)[0].files;
             var file_title = $('#file_title' + j).val();
-            
-            for(var i=0; i<files.length; i++)
-            {
+
+            for (var i = 0; i < files.length; i++) {
                 const fsize = files[i].size;
-                const file = Math.round((fsize/1024));
+                const file = Math.round((fsize / 1024));
                 totalFileSize += file;
-                if (file > (1024 * 20))
-                {
-                    toastr.error("Attached Document at Row-"+j+" is more than 20 MB !!");
+                if (file > (1024 * 20)) {
+                    toastr.error("Attached Document at Row-" + j + " is more than 20 MB !!");
                     return false;
                 }
                 await getBase64(files[i]).then(
-                data => fileData[j] = {
-                    filedata: data,
-                    filename: files[i]['name'],
-                    file_title: file_title
-                });
+                    data => fileData[j] = {
+                        filedata: data,
+                        filename: files[i]['name'],
+                        file_title: file_title
+                    });
             }
         }
-        
+
         var linkData = {};
-        if($('#add_links').prop('checked'))
-        {
-            for (var j = 1; j <= $('#tblLinks tbody tr').length; j++)
-            {
+        if ($('#add_links').prop('checked')) {
+            for (var j = 1; j <= $('#tblLinks tbody tr').length; j++) {
                 var link_title = $('#link_title' + j).val();
                 var link = $('#link' + j).val();
-                
+
                 linkData[j] = {
                     link_title: link_title,
                     link: link
@@ -514,6 +480,7 @@
         //console.log(obj);
         TransportCall(obj);
     }
+
     function saveEditFormData() {
         let obj = {};
         let json = {};
@@ -528,36 +495,34 @@
         obj.JSON = json;
         TransportCall(obj);
     }
+
     function onSuccess(rc) {
 
         if (rc.return_code) {
             switch (rc.Page_key) {
-                 
+
                 case "getNews":
                     loaddata(rc.return_data);
                     break;
                 case "getNewsDetails":
-                    if(rc.return_data.length>0)
+                    if (rc.return_data.length > 0)
                         loaddata1(rc.return_data);
                     else
                         $('#tblNewsDetails').hide();
                     break;
                 case "getNewsType":
                     var newstype_list = rc.return_data;
-                    if (newstype_list.length > 0) 
-                    {
+                    if (newstype_list.length > 0) {
                         $('#type, #type1').find('option').remove();
                         $('#type, #type1').append($("<option></option>").attr("value", ""));
-                        newstype_list.forEach(function (item)
-                        {
+                        newstype_list.forEach(function(item) {
                             $('#type, #type1')
-                            .append($("<option></option>")
-                                .attr("value", item['NewsTypeID'])
-                                .text(item['NewsType'])
-                            );
+                                .append($("<option></option>")
+                                    .attr("value", item['NewsTypeID'])
+                                    .text(item['NewsType'])
+                                );
                         });
-                    }
-                    else {
+                    } else {
                         toastr.warning('No Module found !!');
                     }
                     break;
@@ -571,6 +536,13 @@
                     $("#mdlEdit").modal("hide");
                     loadData();
                     break;
+                case "deleteNews":
+                    toastr.success('Deleted Successfully');
+                    $("#mdlEdit").modal("hide");
+                    loadData();
+                    break;
+
+
                 default:
                     alert(rc.Page_key);
             }
@@ -592,12 +564,13 @@
         var text = ""
         if (data.length > 0) {
             for (let i = 0; i < data.length; i++) {
-                text += '<tr>'; 
+                text += '<tr>';
                 text += '<td>' + data[i].Title + '</td>';
                 text += '<td>' + data[i].StartDate + '</td>';
                 text += '<td>' + data[i].EndDate + '</td>';
                 text += '<td>' + data[i].NewsType + '</td>';
-                text += '<td><button class="btn btn-xs btn-info" data-toggle="modal" data-target="#mdlView" data-news_id="'+data[i].NewsID+'" data-title="'+data[i].Title+'" data-sdate="'+data[i].StartDate+'" data-edate="'+data[i].EndDate+'" data-type="'+data[i].NewsType+'"><i class="fa fa-eye"></i>&nbsp;<strong>VIEW</strong></button></td>';
+                text += '<td><button class="btn btn-xs btn-info" data-toggle="modal" data-target="#mdlView" data-news_id="' + data[i].NewsID + '" data-title="' + data[i].Title + '" data-sdate="' + data[i].StartDate + '" data-edate="' + data[i].EndDate + '" data-type="' + data[i].NewsType + '"><i class="fa fa-eye"></i>&nbsp;<strong>VIEW</strong></button>&nbsp;';
+                text += '<button class="btn btn-xs btn-danger"  title="Delete News"  onclick="onDelete(\'' + escape(JSON.stringify(data[i])) + '\')"> <i class="fas fa-trash-alt"> </i> </button></td>';
                 text += '</tr >';
             }
         }
@@ -640,10 +613,25 @@
                 }
             ]
         });
-    }  
-    
-    function loaddata1(data) 
-    {
+    }
+
+
+    function onDelete(data) {
+        data = JSON.parse(unescape(data));
+        var NewsID = data.NewsID;
+        if (confirm("Are you sure to delete this news?")) {
+            var obj = {};
+            obj.Module = "Admin";
+            obj.Page_key = "deleteNews";
+            var json = {};
+            json.NewsID = NewsID;
+            obj.JSON = json;
+            TransportCall(obj);
+        }
+    }
+
+
+    function loaddata1(data) {
         $('#tblNewsDetails').show();
         var table = $("#tblNewsDetails");
 
@@ -655,38 +643,34 @@
 
         var text = ""
         if (data.length > 0) {
-            for (let i = 0; i < data.length; i++) 
-            {
+            for (let i = 0; i < data.length; i++) {
                 var url;
                 var lnk;
-                
+
                 text += '<tr>';
 
-                if(data[i].TypeID=="1"){
+                if (data[i].TypeID == "1") {
                     text += '<td><strong>File</strong></td>';
                     text += '<td>' + data[i].Title + '</td>';
                     text += '<td><a href=' + data[i].FileLink + ' target="_blank">View/Download</a></td>';
-                }
-                else{
-                    if(data[i].FileLink.substring(0, 8)=='https://'){
-                        lnk=data[i].FileLink.split('https://');
+                } else {
+                    if (data[i].FileLink.substring(0, 8) == 'https://') {
+                        lnk = data[i].FileLink.split('https://');
                         url = lnk[1];
-                    }
-                    else if(data[i].FileLink.substring(0, 7)=='http://'){
-                        lnk=data[i].FileLink.split('http://');
+                    } else if (data[i].FileLink.substring(0, 7) == 'http://') {
+                        lnk = data[i].FileLink.split('http://');
                         url = lnk[1];
-                    }
-                    else{
-                        url=data[i].FileLink;
+                    } else {
+                        url = data[i].FileLink;
                     }
                     text += '<td><strong>Link</strong></td>';
                     text += '<td>' + data[i].Title + '</td>';
                     text += '<td><a href="//' + url + '" target="_blank">Open Link</a></td>';
                 }
-                
+
                 text += '</tr >';
             }
         }
         $("#tblNewsDetails tbody").html(text);
-    }  
+    }
 </script>

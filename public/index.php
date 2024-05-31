@@ -21,10 +21,10 @@ header("Developer: Iewduh Techz Private Limited");
 // set to the user defined error handler
 $old_error_handler = set_error_handler("myErrorHandler");
 
-$_SESSION['root']=$_SERVER['DOCUMENT_ROOT'].'/';
-$_SESSION['header']='../app/views/website/inc/header.php'; //$_SERVER['DOCUMENT_ROOT'].
-$_SESSION['footer']='../app/views/website/inc/footer.php'; //$_SERVER['DOCUMENT_ROOT'].
-$_SESSION['login_assets']=$_SERVER['DOCUMENT_ROOT'].'/assets/login';
+$_SESSION['root'] = $_SERVER['DOCUMENT_ROOT'] . '/';
+$_SESSION['header'] = '../app/views/website/inc/header.php'; //$_SERVER['DOCUMENT_ROOT'].
+$_SESSION['footer'] = '../app/views/website/inc/footer.php'; //$_SERVER['DOCUMENT_ROOT'].
+$_SESSION['login_assets'] = $_SERVER['DOCUMENT_ROOT'] . '/assets/login';
 
 if (isset($_SERVER["HTTP_COOKIE"])) {
     header("HTTP_COOKIE: " . $_SERVER["HTTP_COOKIE"]);
@@ -37,7 +37,8 @@ if (isset($_SESSION["UserTypeID"]) && $_SESSION["UserTypeID"] == 1) {
     define("VIEWPATH", "../app/views/admin");
 } else {
     define("LOGINPATH", "../app/views");
-    define("VIEWPATH", "../app/views/website",true);
+    // define("VIEWPATH", "../app/views/website",true);
+    define("VIEWPATH", "../app/views/website");
 }
 
 $data = json_decode(file_get_contents("php://input"), true);
@@ -93,16 +94,16 @@ if (isset($data["Module"]) && isset($data["Page_key"]) && isset($data["JSON"])) 
 
         switch ($data["Module"]) {
 
-                // case "Settings":
-                //     $result = (new SettingsController())->Route($data);
-                //     break;
-                // case "Url":
-                //     $result = (new UrlController())->Route($data);
-                //     break;
-                case "Admin":
-                    $result = (new AdminController())->Route($data);
-                    break;
-               
+            case "Settings":
+                $result = (new SettingController())->Route($data);
+                break;
+            case "Url":
+                $result = (new UrlController())->Route($data);
+                break;
+            case "Admin":
+                $result = (new AdminController())->Route($data);
+                break;
+
             default:
                 $result = array("return_code" => false, "return_data" => array("Module key not found"));
                 session_destroy();
@@ -113,18 +114,17 @@ if (isset($data["Module"]) && isset($data["Page_key"]) && isset($data["JSON"])) 
 
         $result['Module'] = $data["Module"];
         $result['Page_key'] = $data["Page_key"];
-    } 
-    else {
+    } else {
         switch ($data["Module"]) {
             case "Auth":
                 $result = (new AuthenticationController())->Route($data);
                 break;
-            
+
             case "Admin":
                 $result = (new AdminController())->Route($data);
                 break;
             default:
-              //  $result = (new AuthenticationController)->Route($data);
+                //  $result = (new AuthenticationController)->Route($data);
                 break;
         }
 
@@ -149,32 +149,32 @@ if (isset($data["Module"]) && isset($data["Page_key"]) && isset($data["JSON"])) 
 
     switch ($page[0]) {
 
-            case "":
-            case "dashboard":
-                load(VIEWPATH . "/dashboard.php");
-                break;
-                // case "url":
-                //     UrlController::Views($page);
-                //     break;
-            case "admin":
-                AdminController::Views($page);
-                break;
-            case "file":
-                FileController::File();
-                break;
-                
-            case "cc_program_add":
-                load(VIEWPATH . "/committee/add_program.php");
-                break;
+        case "":
+        case "dashboard":
+            load(VIEWPATH . "/dashboard.php");
+            break;
+        case "url":
+            UrlController::Views($page);
+            break;
+        case "admin":
+            AdminController::Views($page);
+            break;
+        case "file":
+            FileController::File();
+            break;
 
-            case "logout":
-                (new AuthenticationController())->Route($data);
-                session_destroy();
-                header('Location: login');
-                echo "<script>window.location.href='login';</script>";
-                ob_end_flush();
-                exit;
-                break;
+        case "cc_program_add":
+            load(VIEWPATH . "/committee/add_program.php");
+            break;
+
+        case "logout":
+            (new AuthenticationController())->Route($data);
+            session_destroy();
+            header('Location: login');
+            echo "<script>window.location.href='login';</script>";
+            ob_end_flush();
+            exit;
+            break;
 
         default:
             ob_end_flush();
@@ -222,7 +222,7 @@ function publicRequest($query_array)
             case '':
             case 'home':
                 load(VIEWPATH . "/index.php");
-                break; 
+                break;
             case 'llb':
                 load(VIEWPATH . "/home/admission/llb.php");
                 break;
@@ -338,7 +338,7 @@ function publicRequest($query_array)
             case 'iqac-naacvisit2022':
                 load(VIEWPATH . "/iqac/naacvisit2022.php");
                 break;
-                    
+
             case 'academic-committee':
                 load(VIEWPATH . "/committee_cell/academic-committee.php");
                 break;
@@ -417,13 +417,13 @@ function publicRequest($query_array)
             case 'sba':
                 load(VIEWPATH . "/sba.php");
                 break;
-             case 'mooc':
+            case 'mooc':
                 load(VIEWPATH . "/mooc.php");
                 break;
-                
-             case 'scholarship':
+
+            case 'scholarship':
                 load(VIEWPATH . "/scholarship.php");
-                break;  
+                break;
             case 'faculty':
                 load(VIEWPATH . "/faculty.php");
                 break;
@@ -433,6 +433,15 @@ function publicRequest($query_array)
             case 'nadd':
                 load(VIEWPATH . "/nadd.php");
                 break;
+            case 'gallery-gallery':
+                load(VIEWPATH . "/gallery/gallery.php");
+                break;
+
+            case 'gallery-details':
+                load(VIEWPATH . "/gallery/details.php");
+                break;
+
+
             case "file":
                 FileController::File();
                 break;
