@@ -628,4 +628,33 @@ GROUP BY
             return array("return_code" => false, "return_data" => "No News Found");
         }
     }
+
+    function getGalleryBasedOnType($data)
+    {
+        $param = array(
+            [":TypeID", $data['TypeID']]
+        );
+
+        $query = "SELECT 
+    `g`.`GalleryID`, 
+    `g`.`TypeID`, 
+    `g`.`Title`,
+    `g`.`DocumentURL_ID`, 
+    (SELECT GROUP_CONCAT(`d`.`DocumentFilename`) 
+     FROM `settings_alldocuments` `d` 
+     WHERE `d`.`ReferenceID` = `g`.`GalleryID`
+    ) AS 'DocumentFilename',
+    MAX(`d`.`GalleryURL`) AS 'GalleryURL' -- Use an aggregate function for GalleryURL
+FROM  
+    `gallery` `g`
+LEFT JOIN
+    `settings_alldocuments` `d` ON `d`.`ReferenceID` = `g`.`GalleryID`  WHERE `g`.`TypeID` =:TypeID
+GROUP BY 
+    `g`.`GalleryID`, 
+    `g`.`TypeID`, 
+    `g`.`Title`, 
+    `g`.`DocumentURL_ID`";
+        $res = DBController::getDataSet($query, $param);
+        return array("return_code" => true, "return_data" => $res);
+    }
 }

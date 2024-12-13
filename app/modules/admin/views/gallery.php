@@ -23,6 +23,47 @@
         align-items: center;
         justify-content: center;
     }
+
+    .oval-select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 20px;
+        /* Adjust this value for a more oval shape */
+        width: 150px;
+        height: 30px;
+        /* Set a width for the select box */
+        outline: none;
+        cursor: pointer;
+        font-size: 14px;
+        /* Adjust the font size */
+        color: #555;
+        /* Text color */
+
+    }
+
+    .staffs {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        font-size: 16px;
+        width: 200px;
+        height: 45px;
+        /* Adjust the width as needed */
+        outline: none;
+        /* Remove default outline */
+        cursor: pointer;
+        /* Show pointer cursor on hover */
+    }
+
+    .staffs:hover,
+    .staffs:focus {
+        border-color: #4CAF50;
+        /* Change border color on hover or focus */
+    }
 </style>
 
 <div class="content-wrapper" id="maincontent">
@@ -34,7 +75,15 @@
                         <div class="card-header">
 
                             <div class="card-title">
-                                <strong>Gallery</strong>
+                                <h3 class="card-title">Select Type </h3> &nbsp;
+                                <select id="types" class="staffs">
+                                    <option selected="selected" value="-1">Select Type</option>
+                                    <option value="1">Workshop</option>
+                                    <option value="2">Seminar</option>
+                                    <option value="3">Conference (National & Internation)</option>
+                                    <option value="4">Extra-Curriculum Activities</option>
+                                </select>&nbsp;&nbsp;&nbsp;
+
                             </div>
                             <span class="float-right">
                                 <button class="btn btn-xs btn-success" data-toggle="modal" data-target="#mdlAdd"><i class="fa fa-plus"></i>&nbsp;<strong>ADD</strong></button>
@@ -97,11 +146,10 @@
                         </div>
                         <div class="card-body">
                             <div style="overflow:auto; width:100%">
-                                <table id="tblData" class="table table-bordered table-striped">
+                                <table id="tblData" class="table table-bordered table-striped" style="display:none;">
                                     <thead>
                                         <tr>
                                             <th scope="col">Title</th>
-                                            <th scope="col">Type</th>
                                             <th scope="col">PDF / URL</th>
                                         </tr>
                                     </thead>
@@ -127,6 +175,23 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js"></script>
 
 <script>
+    $('#types').on('change', function() {
+        selectedTypes = $(this).val();
+        var fromDate = $('#fromdate').val();
+        var toDate = $('#todate').val();
+        getGalleryBasedOnType(selectedTypes);
+    });
+
+    function getGalleryBasedOnType(selectedTypes) {
+        debugger;
+        let obj = {};
+        obj.Module = "Admin";
+        obj.Page_key = "getGalleryBasedOnType";
+        obj.JSON = {};
+        obj.JSON.TypeID = selectedTypes;
+        SilentTransportCall(obj);
+    }
+
     var url_category_id, module_id, category;
     $('#isPDF').change(function() {
         if ($(this).prop('checked')) {
@@ -232,13 +297,21 @@
             switch (rc.Page_key) {
 
                 case "getImages":
+                    //loaddata(rc.return_data);
+                    break;
+
+                case "getGalleryBasedOnType":
+                    $("#tblData").show();
                     loaddata(rc.return_data);
                     break;
+
                 case "addImages":
                     toastr.success('Added Successfully');
                     $("#mdlAdd").modal("hide");
                     loaddata();
                     break;
+
+
                 default:
                     alert(rc.Page_key);
             }
@@ -259,16 +332,6 @@
         if (data.length > 0) {
             for (let i = 0; i < data.length; i++) {
                 var type = "";
-                if (data[i].TypeID == '1')
-                    type = "Workshop";
-                else if (data[i].TypeID == '2')
-                    type = "Seminar";
-                else if (data[i].TypeID == '3')
-                    type = "Conference (National & Internation)";
-                else if (data[i].TypeID == '4')
-                    type = "Extra-Curriculum Activities";
-                else
-                    type = "-NA-";
                 var images = data[i].DocumentFilename.split(',');
                 var image_content = '';
                 images.forEach(function(item) {
@@ -277,7 +340,6 @@
 
                 text += '<tr>';
                 text += '<td>' + data[i].Title + '</td>';
-                text += '<td>' + type + '</td>';
                 text += '<td>'
 
                 if (data[i].DocumentFilename == null) {
@@ -290,7 +352,7 @@
                 } else {
                     // text += '<span>'+data[i].GalleryURL+'</span>';                  
                 }
-                text += '</td>';
+
 
                 text += '</tr >';
             }

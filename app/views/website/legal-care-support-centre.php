@@ -4,53 +4,56 @@ include_once($_SESSION['header']);
 ?>
 
 <style>
-body
-{
-    counter-reset: Serial; /* Set the Serial counter to 0 */
-}
-tr td:first-child:before
-{
-    counter-increment: Serial; /* Increment the Serial counter */
-    content: counter(Serial) "."; /* Display the counter */
-}
-a.w3-bar-item.w3-button.active {
-    color: #fff;
-    background: goldenrod;
-}
+    body {
+        counter-reset: Serial;
+        /* Set the Serial counter to 0 */
+    }
 
-.tbl-founders tr td:nth-child(3) {
-    color: #cc202e;
-}
+    tr td:first-child:before {
+        counter-increment: Serial;
+        /* Increment the Serial counter */
+        content: counter(Serial) ".";
+        /* Display the counter */
+    }
 
-ol li {
-    list-style: decimal;
-    margin: 10px 0px 10px 20px;
-}
+    a.w3-bar-item.w3-button.active {
+        color: #fff;
+        background: goldenrod;
+    }
 
-.cont-right-rig-event-link h4 {
-    font-size: 15px;
-    padding-top: 0px;
-    text-transform: uppercase;
-    color: #570802;
-    padding-bottom: 10px;
-    line-height: 20px;
-    border-bottom: #570802 solid 1px;
-    margin-bottom: 10px;
-}
+    .tbl-founders tr td:nth-child(3) {
+        color: #cc202e;
+    }
 
-.cont-right-rig-event-link h4 {
-    color: #570802;
-    background-image: url(../images/h1-bg.gif);
-    background-repeat: repeat-x;
-    line-height: 18px;
-    padding: 20px 0px;
-    font-size: 15px;
-    color: #580902;
-    font-weight: bold;
-    border-bottom: #cbc1a8 solid 1px;
-    text-align: center;
-    margin: 0px;
-}
+    ol li {
+        list-style: decimal;
+        margin: 10px 0px 10px 20px;
+    }
+
+    .cont-right-rig-event-link h4 {
+        font-size: 15px;
+        padding-top: 0px;
+        text-transform: uppercase;
+        color: #570802;
+        padding-bottom: 10px;
+        line-height: 20px;
+        border-bottom: #570802 solid 1px;
+        margin-bottom: 10px;
+    }
+
+    .cont-right-rig-event-link h4 {
+        color: #570802;
+        background-image: url(../images/h1-bg.gif);
+        background-repeat: repeat-x;
+        line-height: 18px;
+        padding: 20px 0px;
+        font-size: 15px;
+        color: #580902;
+        font-weight: bold;
+        border-bottom: #cbc1a8 solid 1px;
+        text-align: center;
+        margin: 0px;
+    }
 </style>
 
 <div id="wrapper" class="container">
@@ -64,7 +67,6 @@ ol li {
             <div class="row">
                 <div class="col-sm-4">
                     <div class="cont-right-rig-event-link">
-
                         <h4>Programmes and activities the Centre has undertaken</h4>
                         <div style=" overflow:hidden;" id="prgms">
                             <span class="p-3">No Data Found !!</span>
@@ -204,57 +206,54 @@ ol li {
 <?php include_once($_SESSION['footer']); ?>
 
 <script>
-
-  $(function() {
-    getData(); 
-  });
-
-  function getData() {
-    var json = new Object();
-    json.URLCategoryID = '24';
-
-    let obj = {};
-    obj.Module = "Admin";
-    obj.Page_key = "getURLLinkData";
-    obj.JSON = json;
-    TransportCall(obj);
-  }
-
-  function onSuccess(rc) 
-  {
-    //console.log(rc);
-
-    if (rc.return_code) {
-      switch (rc.Page_key) {
-        case "getURLLinkData":
-          var data = rc.return_data;
-          if(data.length>0)
-            loaddata( rc.return_data);
-          break;
-          default:
-            alert(rc.Page_key);
-      }
-    } 
-    else {
-      alert(rc.return_data);
-    }
-  }
-
-  function loaddata(data){
-    //console.log(data);
-    var div_prgm;
-
-    div_prgm = '<marquee direction="up" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();">';
-    div_prgm += '<ul class="columns">';
-    data.forEach(function (params) {
-      div_prgm += '<li>';
-      div_prgm += '<a href="'+params['URL']+'" target="_blank"> <span id="homeright_rptupcomingevents_Label3_0">'+params['Title']+'</span></a>';
-      div_prgm += '</li>';
+    $(function() {
+        getData();
     });
-    div_prgm += '</ul>';
-    div_prgm += '</marquee>';
 
-    $('#prgms').empty();
-    $('#prgms').append(div_prgm);
-  }
+    function getData() {
+        var json = new Object();
+        json.URLCategoryID = '24';
+        let obj = {};
+        obj.Module = "Admin";
+        obj.Page_key = "getURLLinkData";
+        obj.JSON = json;
+        TransportCall(obj);
+    }
+
+    function onSuccess(rc) {
+        //console.log(rc);
+
+        if (rc.return_code) {
+            switch (rc.Page_key) {
+                case "getURLLinkData":
+                    var data = rc.return_data;
+                    if (data.length > 0)
+                        loaddata(rc.return_data);
+                        console.log(rc.return_data);
+                    break;
+                default:
+                    alert(rc.Page_key);
+            }
+        } else {
+            alert(rc.return_data);
+        }
+    }
+
+    function loaddata(data) {
+        //console.log(data);
+        var div_prgm;
+
+        div_prgm = '<marquee direction="up" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();">';
+        div_prgm += '<ul class="columns">';
+        data.forEach(function(params) {
+            div_prgm += '<li>';
+            div_prgm += '<a href="' + params['URL'] + '" target="_blank"> <span id="homeright_rptupcomingevents_Label3_0">' + params['Title'] + '</span></a>';
+            div_prgm += '</li>';
+        });
+        div_prgm += '</ul>';
+        div_prgm += '</marquee>';
+
+        $('#prgms').empty();
+        $('#prgms').append(div_prgm);
+    }
 </script>

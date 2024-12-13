@@ -153,6 +153,11 @@ if (isset($data["Module"]) && isset($data["Page_key"]) && isset($data["JSON"])) 
         case "dashboard":
             load(VIEWPATH . "/dashboard.php");
             break;
+
+        case "changepassword":
+            load(VIEWPATH . "/changepassword.php");
+            break;
+            
         case "url":
             UrlController::Views($page);
             break;
@@ -171,7 +176,6 @@ if (isset($data["Module"]) && isset($data["Page_key"]) && isset($data["JSON"])) 
             (new AuthenticationController())->Route($data);
             session_destroy();
             header('Location: login');
-            echo "<script>window.location.href='login';</script>";
             ob_end_flush();
             exit;
             break;
@@ -441,13 +445,17 @@ function publicRequest($query_array)
                 load(VIEWPATH . "/gallery/details.php");
                 break;
 
-
             case "file":
                 FileController::File();
                 break;
             case "test":
                 load(VIEWPATH . "/test.php");
                 break;
+                
+            case "logout":
+                session_destroy();
+                header('Location: login');
+                exit;
             default:
                 header("Content-type: text/html;");
                 header('HTTP/2 404 Not Found'); //This may be put inside 404.php instead

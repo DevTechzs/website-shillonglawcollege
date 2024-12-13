@@ -2,27 +2,29 @@
 <html>
 
 <style>
-  #gallery a {
-    width: 200px !important;
-    height:200px !important;
-    vertical-align:middle !important;
-    text-decoration: none !important;
-  }
-  #gallery a img {
-    width: inherit !important;
-    height:auto !important;
-    margin: 3px 3px 3px 1px !important;
-    padding: 2px 2px 2px 2px !important;
-    background-color:#cf2c48 !important;
-  }
-  :root {
-   --microtip-transition-duration: 0.2s;
-   --microtip-transition-delay: 0s;
-   --microtip-transition-easing: ease-in-out;
-   --microtip-font-size: 14px;
-   --microtip-font-weight: none;
-   --microtip-text-transform: none;
-  }
+    #gallery a {
+        width: 200px !important;
+        height: 200px !important;
+        vertical-align: middle !important;
+        text-decoration: none !important;
+    }
+
+    #gallery a img {
+        width: inherit !important;
+        height: auto !important;
+        margin: 3px 3px 3px 1px !important;
+        padding: 2px 2px 2px 2px !important;
+        background-color: #cf2c48 !important;
+    }
+
+    :root {
+        --microtip-transition-duration: 0.2s;
+        --microtip-transition-delay: 0s;
+        --microtip-transition-easing: ease-in-out;
+        --microtip-font-size: 14px;
+        --microtip-font-weight: none;
+        --microtip-text-transform: none;
+    }
 </style>
 
 <head>
@@ -42,7 +44,7 @@
     <link href="assets/css/prettyPhoto.css" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
     <script type="text/javascript" src="https://fullcalendar.io/releases/core/4.0.2/main.min.js"></script>
     <script type="text/javascript" src="https://fullcalendar.io/releases/daygrid/4.0.1/main.min.js"></script>
@@ -99,11 +101,11 @@
     <script src="assets/admin/plugins/lg/js/lg-video.min.js"></script>
     <script src="assets/admin/plugins/lg/js/lg-vimeo-thumbnail.min.js"></script>
     <script src="assets/admin/plugins/lg/js/lg-zoom.min.js"></script> -->
-<style>
-    .heading:hover{
-        cursor: pointer;
-    }
-</style>
+    <style>
+        .heading:hover {
+            cursor: pointer;
+        }
+    </style>
     <!-- Tooltip -->
     <link type="text/css" rel="stylesheet" href="https://unpkg.com/microtip/microtip.css" />
 
@@ -285,12 +287,12 @@
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             NAAC
                                         </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">                                  
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <li><a class="dropdown-item" href="file?type=documents&name=ssr1stcycle.pdf"> SSR</a></li>
                                             <li><a class="dropdown-item" href="iqac-naacvisit2022"> NAAC Visit ,(Day 1 & Day 2) Pictures & Videos </a></li>
 
                                             <div class="dropdown-divider"></div>
-                                           
+
                                         </ul>
                                     </li>
 
@@ -303,7 +305,7 @@
                                             <div class="dropdown-divider"></div>
                                             <li><a class="dropdown-item" href="alumini-committee"> Alumini Committee </a></li>
                                             <div class="dropdown-divider"></div>
-                                            <li><a class="dropdown-item"  href="anti-ragging-cell"> Anti-Raging Cell</a></li>
+                                            <li><a class="dropdown-item" href="anti-ragging-cell"> Anti-Raging Cell</a></li>
                                             <div class="dropdown-divider"></div>
                                             <li><a class="dropdown-item" href="cultural-committee"> Cultural Committee </a></li>
                                             <div class="dropdown-divider"></div>
@@ -351,7 +353,7 @@
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <!-- <li><a class="dropdown-item" href="alumni-member"> Members of the Alumini </a></li>
                                             <div class="dropdown-divider"></div> -->
-                                            <li><a class="dropdown-item" href="alumni-advisory"> SLCAA Committee </a></li>  <!--href="alumni-advisory" -->
+                                            <li><a class="dropdown-item" href="alumni-advisory"> SLCAA Committee </a></li> <!--href="alumni-advisory" -->
                                             <div class="dropdown-divider"></div>
                                             <li><a class="dropdown-item" href="alumni-conclave"> Alumini Conclave </a></li>
                                             <div class="dropdown-divider"></div>
@@ -368,21 +370,22 @@
                                             <li><a class="dropdown-item" href="alumni-contact"> Contact Us </a></li>
                                         </ul>
                                     </li>
-                                <!-- <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                         <a class="nav-link" href="legal-care-support-centre">Legal Care & Support Centre</a>
                                     </li> -->
                                     <li class="nav-item">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             NIRF
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <li><a class="dropdown-item" target="_blank" href="https://drive.google.com/file/d/1vavYQaJfNLor0aiuEuJ5TDNC-6tZ5v-1/view"> NIRF 2023 </a></li>
                                             <li><a class="dropdown-item" target="_blank" href="assets/webpdf/2024/The shillong Law College20231209- data NIRF 2024.pdf"> NIRF 2024 </a></li>
+                                            <li><a class="dropdown-item" target="_blank" href="assets/webpdf/2025/The shillong Law College20241213- (1) nirf 2025.pdf"> NIRF 2025 </a></li>
 
                                         </ul>
 
                                     </li>
-                                   
+
 
 
 
@@ -440,10 +443,10 @@
                 <div class="ticker-wrapper-h">
                     <div class="heading" data-toggle="modal" data-target="#mdlNews">Updates & Upcoming Events</div>
                     <marquee direction="left" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();" style="padding-top:7px;">
-                        <!-- <ul class="news-ticker-h"></ul> --> 
+                        <!-- <ul class="news-ticker-h"></ul> -->
                         <span id="div_news2" data-toggle="modal" data-target="#mdlNews">Loading...</span>
                     </marquee>
-                    
+
                 </div>
 
             </div>

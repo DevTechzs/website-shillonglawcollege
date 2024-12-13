@@ -10,8 +10,10 @@ include_once($_SESSION['header']);
   }
 
   #tbl1 tr td:first-child:before {
-    counter-increment: Serial; /* Increment the Serial counter */
-    content: counter(Serial) "."; /* Display the counter */
+    counter-increment: Serial;
+    /* Increment the Serial counter */
+    content: counter(Serial) ".";
+    /* Display the counter */
   }
 
   .tbl-founders tr td:nth-child(3) {
@@ -73,13 +75,20 @@ include_once($_SESSION['header']);
             <h1 style="text-align:center;">Anti-Ragging Cell</h1>
             <div class="space"></div>
             <p><i>The Shillong Law College Anti-Ragging Cell aims to eliminate ragging in all forms within the College campus. The Cell shall take regular measures for prevention of ragging (such as by words spoken or written or by an act which effect teasing, treating or handling with rudeness, indulging in undisciplined activities which causes annoyance, hardship or psychological harm or raise fear among juniors or to perform any act which causes embarrassment and overall affects the psyche of a fresher or a junior students). The Cell shall advertise, awareness programme, orientation and counselling sessions about the Anti-Ragging during the time of admissions, on admission and at the end of every academic year. The Anti-Ragging Cell shall have an Anti-Ragging Squad who shall have vigil, oversight and patrolling functions; it shall be kept mobile, alert and active at all times and shall be empowered to insect places within the college campus. The squad shall investigate incidents of ragging from time to time and make recommendations to the Anti-Ragging Committee. There shall be an undertaking by the Students of every semester to be aware of the law regarding the prohibition of ragging.</i></p>
-           <div style="display:inline-flex"> 
-           <a class="btn btn-warning" href="https://antiragging.in/assets/pdf/information/english/SUMMARY_OF_UGC_REGULATIONS.pdf"> ABSTRACT OF UGC REGULATIONS ON RAGGING </a>
-           <a class="btn btn-warning" href="file?type=documents&name=summary_of_the_Supreme_court_Judgment.pdf"> THE JUDGMENT OF THE HON.
-SUPREME COURT </a>
+            <div style="display:inline-flex">
+              <a class="btn btn-warning" href="https://antiragging.in/assets/pdf/information/english/SUMMARY_OF_UGC_REGULATIONS.pdf"> ABSTRACT OF UGC REGULATIONS ON RAGGING </a>
+              <a class="btn btn-warning" href="file?type=documents&name=summary_of_the_Supreme_court_Judgment.pdf"> THE JUDGMENT OF THE HON.SUPREME COURT </a>
 
-           </div>
-         <br /> <br />
+            </div>
+            <br>
+            <br>
+            <div style="display:inline-flex">
+              <a class="btn btn-warning" style="font-size:15px;" href="https://antiragging.in/affidavit_affiliated_form.php">REVISED PROCEDURE OF ANTI RAGGING UNDERTAKING & COMPLIANCE SUBMISSION.</a>
+              <a class="btn btn-warning" href="file?type=documents&name=student undertaking.pdf">PROCEDURE OF ANTI RAGGING UNDERTAKING & COMPLIANCE SUBMISSION</a>
+
+            </div>
+
+            <br /> <br />
             <b>Punishable ingredients of Ragging: -</b>
             <ul class="ragging-li" style="margin-left: 50px;">
               <li>Abetment to ragging</li>
@@ -331,6 +340,7 @@ SUPREME COURT </a>
   });
 
   function getData() {
+
     var json = new Object();
     json.URLCategoryID = '3';
 

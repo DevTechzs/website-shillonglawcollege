@@ -5,6 +5,7 @@ namespace app\modules\admin;
 use app\core\Controller;
 use \app\database\DBController;
 use app\modules\admin\classes\Admin;
+use app\modules\admin\classes\Password;
 
 
 class AdminController implements Controller
@@ -62,6 +63,18 @@ class AdminController implements Controller
             case 'deleteNews':
                 $result = (new Admin())->deleteNews($jsondata);
                 break;
+
+
+            case 'ChangePassword':
+                $result = (new Password())->ChangePassword($jsondata);
+                break;
+
+            case 'getGalleryBasedOnType':
+                $result = (new Admin())->getGalleryBasedOnType($jsondata);
+                break;
+
+
+
             default:
                 $result = array("return_code" => false, "return_data" => array("Page Key not found"));
                 session_destroy();
